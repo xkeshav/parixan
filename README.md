@@ -1,0 +1,4 @@
+# Parixan
+
+learning by examples 
+

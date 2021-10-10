@@ -1,5 +1,5 @@
 const extensionURL = `http://github.com/xkeshav`;
-const sitecatServer = ["metrics.barclays.co.uk", "smetrics.barclays.co.uk"];
+const sitecatServer = ["metrics.company.domain"]; // for an example
 
 chrome.runtime.onInstalled.addListener((details) => {
 	if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {

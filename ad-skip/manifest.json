@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "yt skip",
+  "version": "1",
+  "description": "You tube Ad skip",
+  "author": "KM",
+  "action": {
+    "browser_action": {},
+    "default_title": "SKIP ME"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "incognito": "spanning",
+  "minimum_chrome_version": "80",
+  "offline_enabled": true,
+  "omnibox": {
+    "keyword": "skip, youtube"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/watch?v=*", "*://*.youtubekids.com/watch?v=*"],
+      "js": ["skip.js"],
+      "css": ["skip.css"]
+    }
+  ],
+  "host_permissions": ["http://localhost/*", "http://127.0.0.1/*", "http://*/*", "https://*/*"],
+  "permissions": ["activeTab", "declarativeContent", "scripting", "tabs"],
+  "short_name": "adSkip",
+  "version_name": "1.0.0",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

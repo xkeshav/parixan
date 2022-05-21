@@ -10,7 +10,7 @@ const lsb = (arr) => {
   let minIndex = 0;
   let maxIndex = 0;
   const hasDuplicate = arr.some((a, i, arr) => arr.indexOf(a) !== i);
-  console.log({hasDuplicate});
+  console.log({ hasDuplicate });
   if (!hasDuplicate) {
     return arr;
   } else {
@@ -38,7 +38,7 @@ const lsb = (arr) => {
 };
 
 const largestSubArray = (arr) => {
-  // first check whether array have any suplicate value
+  // first check whether array have any duplicate value
   const hasDuplicate = arr.some((a, i, arr) => arr.indexOf(a) !== i);
 
   // console.log({hasDuplicate});
@@ -62,16 +62,16 @@ const largestSubArray = (arr) => {
       }
     }
     // console.log({indexedArray});
-    // create new array which hold diffrence between duplicate value index position
+    // create new array which hold difference between duplicate value index position
     let op = [];
     for (const [i, j] of indexedArray) {
       const diff = j - i;
       op.push(diff);
     }
-    // find maximum differnce value
+    // find maximum difference value
     const maxx = Math.max(...op);
     const mIndex = op.indexOf(maxx);
-    // retrive maximum diffrence array from indexedArray
+    // retrieve maximum difference array from indexedArray
     const [min, max] = indexedArray[mIndex];
     const output = arr.slice(min, max);
     // recursively call for next found array for the same

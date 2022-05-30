@@ -30,4 +30,33 @@ const arrange = (input) => {
   }
 };
 
-arrange(data2);
+//arrange(data2);
+
+// solution using the while
+const dnf = (input) => {
+  let left = 0;
+  let mid = 0;
+  let right = input.length - 1;
+  while (mid <= right) {
+    let m = input[mid];
+    let s = input[left];
+    let e = input[right];
+    switch (m) {
+      case 0:
+        mid++;
+        break;
+      case 1:
+        [input[left], input[mid]] = [m, s];
+        left++;
+        mid++;
+        break;
+      case 2:
+        [input[right], input[mid]] = [m, e];
+        right--;
+        break;
+    }
+  }
+  console.log({ input });
+};
+
+dnf(data);

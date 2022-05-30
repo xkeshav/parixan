@@ -5,7 +5,7 @@
     }
   ],
   "settings": {
-    "cSpell.words": ["middlewares", "smetrics", "xkeshav"],
+    "cSpell.words": ["Kadane's", "middlewares", "smetrics", "xkeshav"],
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnType": true,
     "editor.formatOnSave": true,
@@ -44,7 +44,8 @@
       "titleBar.inactiveBackground": "#42b88399",
       "titleBar.inactiveForeground": "#15202b99"
     },
-    "peacock.color": "#42b883"
+    "peacock.color": "#42b883",
+    "cSpell.diagnosticLevel": "Hint"
   },
   "launch": {
     "version": "0.2.0",

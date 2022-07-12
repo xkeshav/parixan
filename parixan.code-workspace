@@ -45,7 +45,8 @@
       "titleBar.inactiveForeground": "#15202b99"
     },
     "peacock.color": "#42b883",
-    "cSpell.diagnosticLevel": "Hint"
+    "cSpell.diagnosticLevel": "Hint",
+    "files.autoSave": "afterDelay"
   },
   "launch": {
     "version": "0.2.0",

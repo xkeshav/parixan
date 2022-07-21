@@ -1,0 +1,32 @@
+.face2 {
+  height: 30rem;
+  width: 21rem;
+  background-color: var(--bg-main);
+  margin: 2rem;
+  position: fixed;
+  left: 136px;
+}
+
+.cheek--right {
+  width: 0;
+  height: 0;
+  border-top: 156px solid transparent;
+  border-bottom: 120px solid #bee60500;
+  border-right: 85px solid var(--bg-blue);
+  transform: rotate(215deg);
+  position: fixed;
+  top: 19.7rem;
+  left: 25.75rem;
+}
+
+.cheek--left {
+  width: 0;
+  height: 0;
+  border-top: 158px solid transparent;
+  border-bottom: 119px solid #bee60500;
+  border-left: 86px solid var(--bg-blue);
+  transform: rotate(145deg);
+  position: fixed;
+  top: -8.2rem;
+  left: -15.5rem;
+}

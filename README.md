@@ -48,8 +48,8 @@ all request are **GET** by default, no POST and other verb can be used while acc
 
 ### Running server in window
 
-![run server in command](https://github.com/xkeshav/parixan/blob/json-server/images/command.png)
+![run server in command](./images/command.png?raw=true 'JSON server run command')
 
 ### display landing page in Chrome
 
-![server running in chrome ](https://github.com/xkeshav/parixan/blob/json-server/images/server-in-chrome.png)
+![server running in chrome ](./images/server-in-chrome.png?raw=true 'Running in Browser')

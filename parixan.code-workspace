@@ -21,6 +21,7 @@
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
     "[ansible]": {
       "gitlens.codeLens.scopes": ["document"]
-    }
+    },
+    "files.autoSave": "afterDelay"
   }
 }

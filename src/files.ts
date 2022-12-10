@@ -25,7 +25,14 @@ const getFiles = (path: string) =>
 // add directory name width file so /auth/login.json -> /auth-login
 const appendDirWithFile = (name: string) => name.replace(baseFolder, '').split(sep).filter(Boolean).join('-').split('.').shift();
 
-const getJsonContent = (filePath: string) => JSON.parse(readFileSync(filePath, 'utf-8'));
+const getJsonContent = (filePath: string) => {
+	try {
+		return JSON.parse(readFileSync(filePath, 'utf-8'));
+	} catch (e) {
+		console.log(`given ${filePath} not found.`);
+		return {};
+	}
+}
 
 const getFilesRecursively = (dirPath: string) => {
 	const relativePath = relative(process.cwd(), dirPath);
@@ -37,13 +44,11 @@ const getFilesRecursively = (dirPath: string) => {
 };
 
 export const generateMockDB = (dirPath: string) => {
-	console.log({ dirPath });
 	const fileList = getFilesRecursively(dirPath);
 	fileList.forEach((file) => {
 		const endpoint = appendDirWithFile(file) as string;
 		const jsonContent = getJsonContent(file);
 		const route = { [endpoint]: jsonContent };
-		console.log({ route });
 		Object.assign(mockJsonList, route);
 	});
 	return mockJsonList;

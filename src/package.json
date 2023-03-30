@@ -1,7 +1,7 @@
 {
-  "name": "src",
+  "name": "parixan",
   "version": "1.0.0",
-  "description": "vs-code extension",
+  "description": "my Own play ground",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/xkeshav/parixan.git"
   },
-  "keywords": [
-    "vs",
-    "code"
-  ],
   "author": "Keshav Mohta",
   "license": "ISC",
   "bugs": {

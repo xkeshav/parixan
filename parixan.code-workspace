@@ -42,6 +42,10 @@
       "titleBar.inactiveBackground": "#7766dd99",
       "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#7766dd"
+    "peacock.color": "#7766dd",
+    "files.exclude": {
+      "amplify/**": true
+    },
+    "explorer.excludeGitIgnore": false
   }
 }

@@ -1,17 +1,26 @@
-import express from 'express';
-import path from 'path';
+//import express from 'express';
+//import path from 'path';
 
-import { fileURLToPath } from 'url';
+const { resolve, join } = require('path');
+const express = require('express');
 
-const __filename = fileURLToPath(import.meta.url);
+//import { fileURLToPath } from 'url';
 
-const __dirname = path.dirname(__filename);
+//const __filename = fileURLToPath(import.meta.url);
+
+//const __dirname = path.dirname(__filename);
 
 const app = express();
 
-const BASE_DIR = path.join(__dirname, 'src');
+const currentDirectory = process.cwd(); // current directory
+
+//console.log({ currentDirectory });
+
+app.use(express.static('dist'));
+
+const BASE_DIR = join(resolve(currentDirectory, 'dist'));
 console.log({ BASE_DIR });
-const HTML_DIR = path.join(BASE_DIR, 'html');
+const HTML_DIR = join(BASE_DIR, 'html');
 const port = 3033;
 
 //console.log({ BASE_DIR, HTML_DIR });

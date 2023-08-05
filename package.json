@@ -2,7 +2,6 @@
   "name": "parixan",
   "version": "1.0.0",
   "description": "parcel",
-  "type": "module",
   "default": "src/html/index.html",
   "scripts": {
     "serve": "NODE_ENV=dev nodemon dist/index.js",
@@ -10,7 +9,7 @@
     "build": "parcel build src/html/index.html --no-content-hash --public-url ./",
     "start": "parcel src/html/*.html --lazy",
     "watch": "parcel watch --no-hmr",
-    "dev": "npm run start && node ./server/index.mjs"
+    "dev": "npm run start && node ./server/index.js"
   },
   "repository": {
     "type": "git",

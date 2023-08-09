@@ -23,9 +23,6 @@
       "gitlens.codeLens.scopes": ["document"]
     },
     "workbench.colorCustomizations": {
-      "editorError.foreground": "#ff000088",
-      "editorWarning.foreground": "#aca98e33",
-      "editorInfo.foreground": "#00ff0088",
       "activityBar.activeBackground": "#65c89b",
       "activityBar.activeBorder": "#945bc4",
       "activityBar.background": "#65c89b",
@@ -42,11 +39,15 @@
       "titleBar.activeBackground": "#42b883",
       "titleBar.activeForeground": "#15202b",
       "titleBar.inactiveBackground": "#42b88399",
-      "titleBar.inactiveForeground": "#15202b99"
+      "titleBar.inactiveForeground": "#15202b99",
+      "commandCenter.border": "#15202b99"
     },
     "peacock.color": "#42b883",
     "cSpell.diagnosticLevel": "Hint",
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "[javascript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
   },
   "launch": {
     "version": "0.2.0",

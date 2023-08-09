@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Throttle and Deobunce</title>
+	<style>
+		div {
+			height: 28rem;
+			width: 28rem;
+			background-color: purple;
+			color: yellow;
+			display: grid;
+			place-content: center;
+			font-size: x-large;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>Learn JS</h1>
+	<div id="position">
+		Move the cursor
+	</div>
+
+</body>
+
+</html>
+<script>
+	let count = 0;
+	const throttle = (fn, interval) => {
+		console.log('throttle');
+		let hasCalled = true;
+		return function (...args) {
+			if (!hasCalled) return;
+			hasCalled = false;
+			fn.apply(this, args);
+			setTimeout(() => hasCalled = true, interval);
+		}
+	}
+
+	const debounce = (fn, interval) => {
+		console.log('debounce');
+		let debounceTimeId;
+		return function (...args) {
+			clearTimeout(debounceTimeId);
+			debounceTimeId = setTimeout(() => fn.apply(this, args), interval);
+		}
+	}
+
+	const logPointer = (e) => {
+		console.log('logPointer called')
+		const { clientX, clientY } = e;
+		count++;
+		positionElement.innerHTML = `
+		X: ${clientX},
+		Y: ${clientY},
+		call: ${count}
+	`
+	}
+	const positionElement = document.querySelector('#position');
+	let clicked = true;
+	positionElement.addEventListener('mousemove', logPointer);
+
+	//positionElement.addEventListener('mousemove', throttle(logPointer, 500));
+	//positionElement.addEventListener('mousemove', debounce(logPointer, 500));
+
+</script>

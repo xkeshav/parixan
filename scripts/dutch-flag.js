@@ -39,19 +39,19 @@ const dnf = (input) => {
   let right = input.length - 1;
   while (mid <= right) {
     let m = input[mid];
-    let s = input[left];
-    let e = input[right];
-    switch (m) {
-      case 0:
-        mid++;
-        break;
-      case 1:
-        [input[left], input[mid]] = [m, s];
+    let l = input[left];
+    let r = input[right];
+		switch (m) {
+			case 0:
+        [input[left], input[mid]] = [m, l]; // changing the same input without new variable
         left++;
         mid++;
         break;
+      case 1: // on pivot just move middle further
+        mid++;
+        break;
       case 2:
-        [input[right], input[mid]] = [m, e];
+        [input[right], input[mid]] = [m, r];
         right--;
         break;
     }

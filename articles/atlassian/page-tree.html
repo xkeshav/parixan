@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Page Tree</title>
+	<script src="./page-data.js"></script>
+</head>
+
+<body>
+	<script type="text/javascript">
+		const appendToParent = (data, parent = null) => {
+			const list = document.createElement('ul');
+			data.forEach((child) => {
+				const item = document.createElement('li');
+				item.textContent = child.name;
+				list.appendChild(item);
+				if (child.children) {
+					appendToParent(child.children, item);
+				}
+			});
+			parent.appendChild(list);
+		};
+		const getData = async () => {
+			const data = await fetchData();
+			appendToParent(data, document.body);
+		};
+
+		const data = getData();
+
+
+	</script>
+</body>
+
+</html>

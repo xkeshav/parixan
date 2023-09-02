@@ -58,4 +58,4 @@ function fetchData() {
 Date: 31 Aug, 2023
 Duration: 1 hour
 
-Question: asked to create a production ready method for getting feature flag by sending feature flag name
+Question: asked to create a production ready method for getting feature flag by sending feature flag name, this was basically more on async await related question.

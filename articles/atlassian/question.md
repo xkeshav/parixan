@@ -1,9 +1,11 @@
 # Interview Question
 
-Date: Aug 24, 2023
 Company: Atlassian
 
-it was asked in browser coding round and time allocated was 1 hour.
+## Browser Coding round
+
+Date: Aug 24, 2023
+Duration: 1 hour
 
 Question: develop below page in any framework/vanilla using the data coming from **page-data.js**
 
@@ -50,3 +52,10 @@ function fetchData() {
 ```
 
 ![Page Tree](PageTree.png)
+
+## JavaScript Coding Round
+
+Date: 31 Aug, 2023
+Duration: 1 hour
+
+Question: asked to create a production ready method for getting feature flag by sending feature flag name

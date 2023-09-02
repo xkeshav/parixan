@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Grid</title>
+	<style>
+		.main {
+			display: grid;
+			align-items: center;
+			justify-items: center;
+			/* now toggle below property add see the difference */
+			/* justify-content: center; */
+			color: black;
+			grid-template-areas:
+				"foo"
+				"bar";
+			grid-auto-flow: row;
+			grid-template-rows: repeat(auto-fill, minmax(1rem, max-content))
+		}
+
+		.grid__child {
+			background-color: #444;
+			color: #fff;
+			font-size: 2em;
+			padding: 2rem;
+		}
+
+		.foo {
+			grid-area: foo;
+			/*justify-self: stretch; */
+			background-color: grey;
+		}
+
+		.bar {
+			grid-area: bar;
+			/* 1. comment below line */
+			justify-self: stretch;
+			background-color: green;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<div class="main">
+		<div class="grid__child foo">Foo</div>
+		<div class="grid__child bar">Bar</div>
+	</div>
+
+</body>
+
+</html>

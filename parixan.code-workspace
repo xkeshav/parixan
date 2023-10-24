@@ -14,10 +14,8 @@
     "zenMode.hideLineNumbers": false,
     "workbench.list.multiSelectModifier": "alt",
     "editor.multiCursorModifier": "ctrlCmd",
-    "eslint.alwaysShowStatus": true,
     "eslint.format.enable": true,
     "eslint.lintTask.enable": true,
-    "html.format.endWithNewline": true,
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
     "[ansible]": {
       "gitlens.codeLens.scopes": ["document"]
@@ -47,13 +45,19 @@
     "files.autoSave": "afterDelay",
     "[javascript]": {
       "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "files.exclude": {
+      "*.html": true,
+      "articles/**": true,
+      "scripts/**": true,
+      "styles/**": true
     }
   },
   "launch": {
     "version": "0.2.0",
     "configurations": [
       {
-        "type": "pwa-chrome",
+        "type": "chrome",
         "request": "launch",
         "name": "Launch Chrome against localhost",
         "url": "http://localhost:8080",

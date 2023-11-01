@@ -62,6 +62,10 @@ router.get('/tree', (_, res) => {
   res.sendFile(`${HTML_DIR}/tree.html`);
 });
 
+router.get('/math', (_, res) => {
+  res.sendFile(`${HTML_DIR}/math.html`);
+});
+
 router.get('/record', (_, res) => {
   console.log('Accessing the record section…');
   res.sendFile(`${HTML_DIR}/record.html`);

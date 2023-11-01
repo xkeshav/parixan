@@ -9,7 +9,7 @@
     "build": "parcel build src/html/*.html --public-url ./",
     "start": "parcel src/html/*.html --lazy",
     "watch": "parcel watch --no-hmr",
-    "dev": "npm run start && node ./server/index.js"
+    "dev": "npm run start && node ./server/index.js --no-cache"
   },
   "repository": {
     "type": "git",

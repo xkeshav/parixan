@@ -1,9 +1,8 @@
-# PARIXAN
+```
+npm install
+npm run start
+```
 
-my own learning code pad
-
-## Known Issues
-
-## Release Notes
-
-## TODO
+```
+open http://localhost:3000
+```

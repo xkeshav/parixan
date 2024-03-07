@@ -1,0 +1,13 @@
+/* @theme my-marp */
+
+@import 'base';
+
+footer {
+  color: mediumseagreen;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+footer::first-letter {
+  color: purple;
+}

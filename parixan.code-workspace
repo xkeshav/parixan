@@ -46,6 +46,7 @@
     "files.exclude": {
       "amplify/**": true
     },
-    "explorer.excludeGitIgnore": false
+    "explorer.excludeGitIgnore": false,
+    "markdown.marp.themes": ["./themes/my-marp.css"]
   }
 }

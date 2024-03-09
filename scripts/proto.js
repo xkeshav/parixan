@@ -1,4 +1,5 @@
 const { log } = console;
+
 const laptop = {
   name: 'dell',
   os: 'windows',
@@ -8,7 +9,7 @@ const desktop = {
   build: 2021,
 };
 
-//log(laptop.__proto__); //exist
+// log(laptop.__proto__); //exist
 // log(laptop.prototype); // undefined
 
 // now if we want to access one object property via another then it access using __proto__

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Throttle</title>
+</head>
+
+<body>
+	<button id="btn"> Button</button>
+	<script>
+		// using spread syntax
+		const throttleFunction = (fn, delay) => {
+			let timer = null;
+			return (...args) => {
+				if (!timer) {
+					fn(...args);
+					timer = setTimeout(() => {
+						timer = null;
+					}, delay);
+				}
+			}
+		};
+
+		// using apply 
+
+		const withThrottle = (fn, delay) => {
+			let inThrottle = false;
+			return function () {
+				const args = arguments;
+				const context = this;
+				if (!inThrottle) {
+					fn.apply(context, args);
+					inThrottle = true;
+					setTimeout(() => inThrottle = false, delay);
+				}
+			}
+		};
+
+		const withDebounce = (fn, d) => {
+			let timer;
+			return (...args) => {
+				clearTimeout(timer);
+				timer = setTimeout(() => {
+					fn(...args);
+				}, d);
+			}
+		};
+
+		const random = () => console.log(Math.floor(Math.random() * 10));
+		const btn = document.querySelector('#btn');
+		clickHandler = withDebounce(random, 5 * 1000)
+		btn.addEventListener("click", clickHandler);
+	</script>
+</body>
+
+</html>

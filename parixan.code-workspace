@@ -5,7 +5,12 @@
     }
   ],
   "settings": {
-    "cSpell.words": ["Kadane's", "middlewares", "smetrics", "xkeshav"],
+    "cSpell.words": [
+      "Kadane's",
+      "middlewares",
+      "smetrics",
+      "xkeshav"
+    ],
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnType": true,
     "editor.formatOnSave": true,
@@ -17,9 +22,6 @@
     "eslint.format.enable": true,
     "eslint.lintTask.enable": true,
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
-    "[ansible]": {
-      "gitlens.codeLens.scopes": ["document"]
-    },
     "workbench.colorCustomizations": {
       "activityBar.activeBackground": "#65c89b",
       "activityBar.activeBorder": "#945bc4",
@@ -49,7 +51,7 @@
     "files.exclude": {
       "*.html": true,
       "articles/**": true,
-      "scripts/**": true,
+      "scripts/**": false,
       "styles/**": true
     }
   },

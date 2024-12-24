@@ -5,7 +5,11 @@
     }
   ],
   "settings": {
-    "cSpell.words": ["middlewares", "smetrics", "xkeshav"],
+    "cSpell.words": [
+      "middlewares",
+      "smetrics",
+      "xkeshav"
+    ],
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnType": true,
     "editor.formatOnSave": true,
@@ -20,7 +24,9 @@
     "html.format.endWithNewline": true,
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
     "[ansible]": {
-      "gitlens.codeLens.scopes": ["document"]
+      "gitlens.codeLens.scopes": [
+        "document"
+      ]
     },
     "files.autoSave": "afterDelay",
     "workbench.colorCustomizations": {
@@ -40,7 +46,9 @@
       "titleBar.activeBackground": "#7766dd",
       "titleBar.activeForeground": "#e7e7e7",
       "titleBar.inactiveBackground": "#7766dd99",
-      "titleBar.inactiveForeground": "#e7e7e799"
+      "titleBar.inactiveForeground": "#e7e7e799",
+      "sideBar.border": "#9c90e6",
+      "tab.activeBorder": "#9c90e6"
     },
     "peacock.color": "#7766dd"
   }

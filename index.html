@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounce + Throttle + Default</title>
+    <style>
+        input {
+            font-size: 2rem;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            ;
+        }
+
+        main {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        section {
+            border: 1px solid green;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            padding-inline: 0.5rem;
+            margin-right: 1rem;
+            width: 80vw;
+
+            & span {
+                color: red;
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Checking JS concepts</h1>
+    <input type="text" id="input">
+    <main>
+        <section>Default:<span id="default"></span></section>
+        <section>Debounce:<span id="debounce"></span></section>
+        <section>Throttle:<span id="throttle"></span></section>
+    </main>
+    <script>
+        const input = document.getElementById('input');
+        const defaultText = document.getElementById('default');
+        const debounceText = document.getElementById('debounce');
+        const throttleText = document.getElementById('throttle');
+        let num = 0;
+        const increaseNumber = () => num++;
+
+        const debounce = (fn, delay = 1000) => {
+            let timer;
+            return (...args) => {
+                clearTimeout(timer);
+                timer = setTimeout(() => fn(...args), delay);
+            }
+        }
+
+        const throttle = (fn, delay = 1000) => {
+            let timer;
+            let lastCallTime = 0;
+            return (...args) => {
+                const now = Date.now();
+                const timeSinceLastCall = now - lastCallTime;
+                console.log({ timeSinceLastCall, delay })
+                if (timeSinceLastCall >= delay) {
+                    console.log('if');
+                    fn(...args);
+                    lastCallTime = now;
+                }
+                else {
+                    console.log('else')
+                    clearTimeout(timer);
+                    timer = setTimeout(() => {
+                        fn(...args);
+                        lastCallTime = Date.now();
+                    }, delay);
+                }
+            };
+        };
+
+        const defaultTextContent = (t) => {
+            defaultText.textContent = t;
+        };
+
+        const debounceTextContent = debounce((t) => {
+            debounceText.textContent = t;
+        });
+
+        const throttleTextContent = throttle((t) => {
+            throttleText.textContent = t;
+        });
+
+        document.addEventListener('input', (e) => {
+            const text = e.target.value;
+            defaultTextContent(text);
+            debounceTextContent(text);
+            throttleTextContent(text);
+        });
+
+        // document.addEventListener('mousemove', () => {
+        //     defaultText.textContent = increaseNumber() + input.value;
+        //     debounce(debounceTextContent);
+        // });
+
+
+    </script>
+</body>
+
+</html>

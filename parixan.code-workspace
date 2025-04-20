@@ -5,12 +5,7 @@
     }
   ],
   "settings": {
-    "cSpell.words": [
-      "Kadane's",
-      "middlewares",
-      "smetrics",
-      "xkeshav"
-    ],
+    "cSpell.words": ["Kadane's", "middlewares", "smetrics", "xkeshav"],
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnType": true,
     "editor.formatOnSave": true,
@@ -49,10 +44,7 @@
       "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "files.exclude": {
-      "*.html": true,
-      "articles/**": true,
-      "scripts/**": false,
-      "styles/**": true
+      "scripts/**": false
     }
   },
   "launch": {
